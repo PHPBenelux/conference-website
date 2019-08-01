@@ -1,0 +1,28 @@
+{
+  "name": "phpbenelux/conference",
+  "description": "PHPBenelux Conference website",
+  "version": "1.0",
+  "type": "project",
+  "keywords": ["phpbenelux", "conference"],
+  "homepage": "https://conference.phpbenelux.eu",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "PHPBenelux",
+      "email": "info@phpbenelux.eu"
+    }
+  ],
+  "support": {
+    "chat": "https://phpbenelux.slack.com"
+  },
+  "require": {
+    "johnpbloch/wordpress": "^4.7"
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "wp core install --allow-root",
+      "wp theme install twentyseventeen --allow-root",
+      "wp plugin install advanced-custom-fields akismet browser-theme-color contact-form-7 content-aware-sidebars custom-post-type-ui flamingo jetpack mailchimp-for-wp opengraph page-sidebar-for-twentyseventeen sendgrid-email-delivery-simplified w3-total-cache widget-shortcode wordfence wordpress-seo --allow-root --activate"
+    ]
+  }
+}

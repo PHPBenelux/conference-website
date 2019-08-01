@@ -1,0 +1,8 @@
+path: /var/www/html
+url: http://127.0.0.1
+user: conf_admin
+
+core install:
+  title: PHPBenelux Conference
+  admin_user: conf_admin
+  admin_email: dev@phpbenelux.eu
