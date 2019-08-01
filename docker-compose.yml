@@ -1,7 +1,10 @@
 version: '3.1'
 
-services:
+secrets:
+  host_ssh_key:
+    file: ~/.ssh/id_rsa
 
+services:
   phpbnl_conf_wordpress:
     build: containers/wp-cli
     restart: always
@@ -18,6 +21,8 @@ services:
     volumes:
       - ./etc/wp:/etc/wp
       - ./www:/var/www/html
+    secrets:
+      - host_ssh_key
 
   phpbnl_conf_db:
     image: mysql:5.7

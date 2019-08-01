@@ -22,7 +22,16 @@
     "post-update-cmd": [
       "wp core install --allow-root",
       "wp theme install twentyseventeen --allow-root",
-      "wp plugin install advanced-custom-fields akismet browser-theme-color contact-form-7 content-aware-sidebars custom-post-type-ui flamingo jetpack mailchimp-for-wp opengraph page-sidebar-for-twentyseventeen sendgrid-email-delivery-simplified w3-total-cache widget-shortcode wordfence wordpress-seo --allow-root --activate"
+      "wp plugin install advanced-custom-fields akismet browser-theme-color contact-form-7 content-aware-sidebars custom-post-type-ui flamingo jetpack mailchimp-for-wp opengraph page-sidebar-for-twentyseventeen sendgrid-email-delivery-simplified w3-total-cache widget-shortcode wordfence wordpress-seo --allow-root --activate",
+      "rm -rf wp-content/themes/wp-theme-conference",
+      "git clone git@github.com:PHPBenelux/wp-theme-conference.git wp-content/themes/wp-theme-conference",
+      "rm -rf wp-content/plugins/wp-plugin-conference-schedule",
+      "git clone git@github.com:PHPBenelux/wp-plugin-conference-schedule.git wp-content/plugins/wp-plugin-conference-schedule",
+      "rm -rf wp-content/plugins/wp-plugin-conference-sponsors",
+      "git clone git@github.com:PHPBenelux/wp-plugin-conference-sponsors.git wp-content/plugins/wp-plugin-conference-sponsors",
+      "wp theme activate wp-theme-conference --allow-root",
+      "wp plugin activate wp-plugin-conference-schedule --allow-root",
+      "wp plugin activate wp-plugin-conference-sponsors --allow-root"
     ]
   }
 }
