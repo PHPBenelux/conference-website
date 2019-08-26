@@ -4,7 +4,7 @@ namespace Deployer;
 require 'recipe/common.php';
 
 // Project name
-set('application', 'my_project');
+set('application', 'phpbenelux_conference');
 
 // Project repository
 set('repository', 'git@github.com:PHPBenelux/conference-website.git');
@@ -19,15 +19,15 @@ set('shared_dirs', []);
 // Writable dirs by web server 
 set('writable_dirs', []);
 
+// Use sudo
+set('writable_use_sudo', true);
+set('clear_use_sudo', true);
+set('cleanup_use_sudo', true);
 
 // Hosts
-
-host('project.com')
-    ->set('deploy_path', '~/{{application}}');    
+inventory('hosts.yml');
     
-
 // Tasks
-
 desc('Deploy your project');
 task('deploy', [
     'deploy:info',

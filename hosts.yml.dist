@@ -1,7 +1,4 @@
-<?php
-/**
- * conference - All rights reserved
- */
-
-$username = 'johndoe';
-$keyfile = '~/.ssh/id_rsa';
+conference.phpbenelux.eu:
+  user: johndoe
+  identityFile: ~/.ssh/id_rsa
+  deploy_path: /var/www/conference.phpbenelux.eu
