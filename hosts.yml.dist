@@ -1,0 +1,7 @@
+<?php
+/**
+ * conference - All rights reserved
+ */
+
+$username = 'johndoe';
+$keyfile = '~/.ssh/id_rsa';
